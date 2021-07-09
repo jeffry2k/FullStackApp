@@ -1,0 +1,20 @@
+{
+  "name": "fullstackapp",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "database": "md fullstack_db & \"C:/Program Files/MongoDb/Server/4.4/bin/mongod.exe\" --dbpath fullstack_db",
+    "client": "cd frontend && npm start",
+    "server": "cd backend && npm start",
+    "dev": "npm run database",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "backend": "file:./backend",
+    "concurrently": "^6.2.0",
+    "frontend": "file:./frontend"
+  }
+}
