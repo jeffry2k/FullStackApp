@@ -15,7 +15,8 @@ Then in the project directory, you can run:
 npm install
 ```
 # Compiles and run app
-Once the npm install has finished...
+Once the npm install command has finished...
+
 In the project directory, you can run:
 ```javascript
 npm start
