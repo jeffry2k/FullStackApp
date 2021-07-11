@@ -4,11 +4,11 @@ This project was bootstrapped with Create React App.
 
 # Note:
 
-To run this project you must have node and mongodb installed
+To run this project you must have node and mongodb installed on your PC
 
 # Project setup
 
-First, be sure that an instance of mongodb is running
+First, make sure that an instance of mongodb is running
 
 Then in the project directory, you can run:
 ```javascript
@@ -23,6 +23,6 @@ npm start
 ```
 
 # In the browser
-Go to register option to create a new user and then go to login option and insert a username and password valids.
-That's it, now you can make your to-do list
+Go to the "Register" option to create a new user and then go to the "Login" option and enter a valid username and password.
+At this point you can now make your to-do list
 
