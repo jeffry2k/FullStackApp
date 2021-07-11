@@ -9,7 +9,8 @@ To run this project you must have node and mongodb installed
 # Project setup
 
 In the project directory, you can run:
-
-`npm install`
+```javascript
+npm install
+```
 
 
