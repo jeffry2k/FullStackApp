@@ -10,4 +10,6 @@ To run this project you must have node and mongodb installed
 
 In the project directory, you can run:
 
+`npm install`
+
 
