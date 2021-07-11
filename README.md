@@ -8,9 +8,20 @@ To run this project you must have node and mongodb installed
 
 # Project setup
 
-In the project directory, you can run:
+First, be sure that an instance of mongodb is running
+
+Then in the project directory, you can run:
 ```javascript
 npm install
 ```
+# Compiles and run app
+Once the npm install has finished...
+In the project directory, you can run:
+```javascript
+npm start
+```
 
+# In the browser
+Go to register option to create a new user and then go to login option and insert a username and password valids.
+That's it, now you can make your to-do list
 
