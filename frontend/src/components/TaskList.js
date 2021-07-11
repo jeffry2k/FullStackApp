@@ -15,10 +15,8 @@ const TaskList = (props) => {
       TaskService.getTasks(currentUser.id).then(
         (response) => {  
           let obj = [];
-          let obj1 = [];
           for(let i=0; i < response.data.tasks.length; i++){   
-            obj1 = response.data.tasks[i];        
-            obj[i] = obj1;                       
+            obj.push(response.data.tasks[i]);                    
           }      
           setContent(obj);
         },
