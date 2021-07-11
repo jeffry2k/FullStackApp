@@ -4,7 +4,6 @@ import User, { IUser } from '../models/user.model';
 var jwt = require("jsonwebtoken");
 
 export const register = async(req: Request, res: Response) => {  
-  console.log(req.body.email);
   const user: IUser = new User({
     username: req.body.username,
     email: req.body.email,

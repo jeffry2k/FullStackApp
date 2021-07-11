@@ -9,7 +9,7 @@ const API_URL = "http://localhost:4000/api/task/";
         headers: authHeader() 
       })
       .then((response) => {
-        return response.data;
+        return response;
       })
   };
 
@@ -19,7 +19,7 @@ const API_URL = "http://localhost:4000/api/task/";
         headers: authHeader() 
       })
       .then((response) => {
-        return response.data;
+        return response;
       })      
   };  
 
@@ -36,7 +36,6 @@ const updateTask = (idTask, title, content, date) => {
     content,
     date
   }   
-  console.log(updatedTask);
   return axios.put(API_URL + "update/" + idTask, updatedTask,  { headers: authHeader() })
 }
 

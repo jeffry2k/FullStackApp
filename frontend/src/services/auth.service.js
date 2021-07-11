@@ -11,7 +11,7 @@ const register = (username, email, password) => {
       password,
     })
     .then((response) => {
-      return response.data;
+      return response;
     })
 };
 

@@ -27,7 +27,7 @@ const CreateTask = (props) => {
   
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
-    const [date, setDate] = useState("");
+    const [date, setDate] = useState(new Date());
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
 
@@ -35,7 +35,9 @@ const CreateTask = (props) => {
         if (props.match.params.id) {  
             TaskService.getTask(props.match.params.id)
             .then(
-                (response) => {       ;
+                (response) => {
+                    console.log(response.data.task[0]);
+                    console.log(response.data.task);
                     setTitle(response.data.task[0].title);
                     setContent(response.data.task[0].content);
                     setDate(new Date(response.data.task[0].date));                
@@ -61,6 +63,7 @@ const CreateTask = (props) => {
     };
 
     const onChangeDate = dateNew => {
+        console.log(dateNew);
         setDate(dateNew);
     };    
   
@@ -150,8 +153,6 @@ const CreateTask = (props) => {
                         className="form-control"
                         placeholder="Date"
                         selected={date}
-                        value={date}
-                        dateFormat="dd/MM/yyyy"
                         onChange={onChangeDate}
                         validations={[required]}/>
                 </div>
