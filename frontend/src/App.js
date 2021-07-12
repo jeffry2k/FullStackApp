@@ -24,7 +24,7 @@ const App = () => {
     }
   }, []);
 
-  const logOut = () => {
+  const logout = () => {
     sessionStorage.removeItem("user")
   };
 
@@ -62,8 +62,8 @@ const App = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <a href="/login" className="nav-link" onClick={logOut}>
-                LogOut
+              <a href="/login" className="nav-link" onClick={logout}>
+                Logout
               </a>           
             </li>
           </div>

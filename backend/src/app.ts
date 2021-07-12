@@ -2,9 +2,6 @@ import express, { Application } from 'express'
 import cors from 'cors';
 import authRoutes from './routes/auth.routes';
 import taskRoutes from './routes/task.routes';
-import userRoutes from './routes/user.routes';
-import verifyLogin from  "./middlewares/verifyLogin";
-import { login, register, logout } from "./contollers/auth.controller";
 
 const app: Application = express();
 
@@ -25,6 +22,5 @@ app.use(express.urlencoded({extended: false}));
 // simple route
 app.use('/api/auth',authRoutes);
 app.use('/api/task',taskRoutes);
-app.use('/api/user',userRoutes);
 
 export default app;

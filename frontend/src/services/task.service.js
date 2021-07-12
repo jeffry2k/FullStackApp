@@ -3,8 +3,8 @@ import authHeader from './auth.header'
 
 const API_URL = "http://localhost:4000/api/task/";
 
-  const getTasks = (id) => {
-    return axios
+  const getTasks = async(id) => {
+    return await axios
       .get(API_URL + "all/" + id, { 
         headers: authHeader() 
       })
@@ -13,8 +13,8 @@ const API_URL = "http://localhost:4000/api/task/";
       })
   };
 
-  const getTask = (id) => {
-    return axios
+  const getTask = async(id) => {
+    return await axios
       .get(API_URL + "getTask/" + id, { 
         headers: authHeader() 
       })
@@ -23,11 +23,11 @@ const API_URL = "http://localhost:4000/api/task/";
       })      
   };  
 
-const deleteTask = (idTask) => {
-  return axios.delete(API_URL + "delete/" + idTask, { headers: authHeader() })
+const deleteTask = async(idTask) => {
+  return await axios.delete(API_URL + "delete/" + idTask, { headers: authHeader() })
 }
 
-const updateTask = (idTask, title, content, date) => {
+const updateTask = async(idTask, title, content, date) => {
   if (date === '') {
     date = new Date();
   }
@@ -36,10 +36,10 @@ const updateTask = (idTask, title, content, date) => {
     content,
     date
   }   
-  return axios.put(API_URL + "update/" + idTask, updatedTask,  { headers: authHeader() })
+  return await axios.put(API_URL + "update/" + idTask, updatedTask,  { headers: authHeader() })
 }
 
-const createTask = (title, content, date, author) => {
+const createTask = async(title, content, date, author) => {
   if (date === '') {
     date = new Date();
   }
@@ -49,7 +49,7 @@ const createTask = (title, content, date, author) => {
     date,
     author
   }     
-  return axios.post(API_URL + "create",  newTask, { headers: authHeader() })
+  return await axios.post(API_URL + "create",  newTask, { headers: authHeader() })
 }
 
 const getTaskId = () => {

@@ -5,7 +5,6 @@ export interface IUser extends Document {
   username: string;
   email: string;
   password: string;
-  //roles: [];
   encrypPassword(password: string): Promise<string>;
   validatePassword(password: string): Promise<boolean>;
 };
@@ -26,12 +25,7 @@ const userSchema = new Schema<IUser>({
   password: {
       type: String,
       required: true
-  }/*,
-  roles: {
-    type: mongoose.Schema.Types.ObjectId,
-    required: true,
-    ref: "Role"
-  }*/
+  }
 }, {
   timestamps: true
 });

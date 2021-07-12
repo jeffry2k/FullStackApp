@@ -1,6 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
 import User from '../models/user.model';
-//const ROLES: any = ["user", "admin", "moderator"];
 
 export const checkDuplicateUsernameOrEmail = async (req: Request, res: Response, next: NextFunction) => {
   try {
@@ -14,22 +13,8 @@ export const checkDuplicateUsernameOrEmail = async (req: Request, res: Response,
   }   
 };
 
-// export const checkRolesExisted = (req: Request, res: Response, next: NextFunction) => {
-//   const roles = Object.values(req.body.roles);
-//   roles.forEach(function(rol) {
-//     if (!ROLES.includes(rol)) {
-//       res.status(400).json(`Failed! Role ${req.body.roles} does not exist!`);
-//       return;
-//     }
-//   }); 
-//   next();
-// };
-
 export const verifySignUp = {
-  checkDuplicateUsernameOrEmail/*,
-  checkRolesExisted*/
+  checkDuplicateUsernameOrEmail
 };
 
 export default verifySignUp;
-
-//module.exports = verifySignUp;

@@ -20,16 +20,11 @@ router.get("/", (req, res) => {
 router.post(
     "/register",
     [
-      verifyLogin.checkDuplicateUsernameOrEmail/*,
-      verifyLogin.checkRolesExisted*/
+      verifyLogin.checkDuplicateUsernameOrEmail
     ],
     register
   );
 
   router.post("/login", login);
-
-  //router.get("/api/auth/roles", getRoles);
-  //router.get("/api/auth/userData", getUserData);
-  router.get("/logout", logout);
 
 export default router;

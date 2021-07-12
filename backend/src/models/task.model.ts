@@ -29,21 +29,3 @@ export interface ITask extends Document {
   });
   
   export default model<ITask>('task', taskSchema);
-  
-/*
-const mongoose = require("mongoose");
-
-const Task = mongoose.model(
-    "Task",
-    new mongoose.Schema({
-        title: String,
-        content: String,
-        author: String,
-        date: Date
-    }, {
-        timestamps: true
-    })
-  );
-  
-  module.exports = Task;
-  */
